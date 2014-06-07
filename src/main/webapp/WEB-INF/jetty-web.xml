@@ -1,0 +1,17 @@
+<?xml version="1.0"?>
+<!DOCTYPE Configure PUBLIC "-//Mort Bay Consulting//DTD Configure//EN" "http://jetty.mortbay.org/configure.dtd">
+<Configure class="org.mortbay.jetty.webapp.WebAppContext">
+  <!-- Jetty 6 datasource syntax -->
+  <New id="companyDataSource" class="org.mortbay.jetty.plus.naming.Resource">
+    <Arg>
+    </Arg>
+    <Arg>java:comp/env/jdbc/MyDatabase</Arg>
+    <Arg>
+      <New class="org.apache.commons.dbcp.BasicDataSource">
+        <Set name="url">jdbc:h2:tcp://localhost/test;USER=sa</Set>
+      </New>
+    </Arg>
+  </New>
+</Configure>
+
+

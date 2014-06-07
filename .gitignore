@@ -1,0 +1,13 @@
+# Eclipse files
+.project
+.classpath
+.settings
+
+# Compiled classes
+target
+
+.DS_Store
+
+# Idea IntelliJ
+.idea
+*.iml
