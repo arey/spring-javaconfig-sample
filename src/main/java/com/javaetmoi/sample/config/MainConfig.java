@@ -25,7 +25,6 @@ import org.springframework.core.env.Environment;
 /**
  * Configuration of the business, persistence and security layers.  
  */
-// @formatter:off
 @Configuration
 @Import(value = { 
         DataSourceConfig.class,
@@ -34,7 +33,6 @@ import org.springframework.core.env.Environment;
         ServiceConfig.class,
         SecurityConfig.class
 } )
-// @formatter:on
 public class MainConfig {
 
     private static final Logger LOG = LoggerFactory.getLogger(MainConfig.class);
