@@ -32,14 +32,12 @@ import org.springframework.scheduling.annotation.AsyncConfigurer;
 import org.springframework.scheduling.annotation.EnableAsync;
 import org.springframework.scheduling.annotation.EnableScheduling;
 import org.springframework.scheduling.concurrent.ThreadPoolTaskExecutor;
-import org.springframework.transaction.annotation.EnableTransactionManagement;
 
 @Configuration
 @EnableAsync
 @EnableScheduling
 @EnableAspectJAutoProxy
 @EnableCaching
-@EnableTransactionManagement
 @ComponentScan(basePackages = { "com.javaetmoi.sample.service" })
 public class ServiceConfig implements AsyncConfigurer {
     
