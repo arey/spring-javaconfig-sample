@@ -29,11 +29,9 @@ import org.springframework.orm.jpa.JpaVendorAdapter;
 import org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean;
 import org.springframework.orm.jpa.vendor.Database;
 import org.springframework.orm.jpa.vendor.HibernateJpaVendorAdapter;
-import org.springframework.transaction.annotation.EnableTransactionManagement;
 import org.springframework.transaction.support.TransactionTemplate;
 
 @Configuration
-@EnableTransactionManagement
 @PropertySource({ "classpath:com/javaetmoi/sample/config/infrastructure.properties" })
 public class InfrastructureConfig {
 
