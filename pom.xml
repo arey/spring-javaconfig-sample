@@ -43,7 +43,8 @@
     <version.slf4j>1.7.7</version.slf4j>
     <version.h2>1.4.177</version.h2>
     <version.junit>4.11</version.junit>
-
+    <version.jetty>6.1.26</version.jetty>
+    <version.commons-dbcp>1.4</version.commons-dbcp>
 
     <!-- Version of maven plugins -->
     <version.plugin.maven-eclipse-plugin>2.9</version.plugin.maven-eclipse-plugin>
@@ -178,6 +179,25 @@
       <scope>test</scope>
     </dependency>
 
+    <!-- Required for Jetty 6 deployment -->
+    <dependency>
+      <groupId>org.mortbay.jetty</groupId>
+      <artifactId>jetty-naming</artifactId>
+      <version>${version.jetty}</version>
+      <scope>runtime</scope>
+    </dependency>
+    <dependency>
+      <groupId>org.mortbay.jetty</groupId>
+      <artifactId>jetty-plus</artifactId>
+      <version>${version.jetty}</version>
+      <scope>runtime</scope>
+    </dependency>
+    <dependency>
+      <groupId>commons-dbcp</groupId>
+      <artifactId>commons-dbcp</artifactId>
+      <version>${version.commons-dbcp}</version>
+      <scope>runtime</scope>
+    </dependency>
 
   </dependencies>
 
