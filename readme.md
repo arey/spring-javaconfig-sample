@@ -5,7 +5,7 @@ Since Spring 3.0, the JavaConfig features are included in the Core Spring module
 Based on Spring Framework 4.0, Spring Data JPA 1.6, Spring Security 3.2 and Hibernate 4.3, this sample show how to use the Spring's new Java-configuration support and its @Configuration-annotated class.
 
 The following classes, interfaces and annotations are used in the sample:
-* JavaConfig main classes and annotations: @Configuration, @Bean, @ComponentScan, @Import, @ImportResource, @Profile, Environment, JndiObjectFactoryBean 
+* JavaConfig main classes and annotations: @Configuration, @Bean, @ComponentScan, @Import, @ImportResource, @Profile, Environment, JndiObjectFactoryBean, @Scope 
 * Spring Test: @WebAppConfiguration, @ContextConfiguration, @ActiveProfiles;  @ContextHierarchy
 * Advanced Spring Framework features: @EnableTransactionManagement, @EnableAsync, @EnableCaching,  @EnableAspectJAutoProxy 
 * Spring Data Jpa annotations: @EnableJpaRepositories
