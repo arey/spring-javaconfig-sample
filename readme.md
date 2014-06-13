@@ -9,7 +9,8 @@ The following classes, interfaces and annotations are used in the sample:
 * Spring Test: @WebAppConfiguration, @ContextConfiguration, @ActiveProfiles;  @ContextHierarchy
 * Advanced Spring Framework features: @EnableTransactionManagement, @EnableAsync, @EnableCaching,  @EnableAspectJAutoProxy 
 * Spring Data Jpa annotations: @EnableJpaRepositories
-* Spring Security classes: @EnableWebMvcSecurity, WebSecurityConfigurerAdapter 
+* Spring Security classes: @EnableWebMvcSecurity, WebSecurityConfigurerAdapter
+* Spring MVC features: @EnableWebMvc, WebMvcConfigurerAdapter, RequestMappingHandlerAdapter, InternalResourceViewResolver, ignoreDefaultModelOnRedirect 
 
 
 ## Build Status ##
