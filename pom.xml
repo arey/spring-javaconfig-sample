@@ -60,7 +60,7 @@
 
 
     <!-- Source encoding -->
-    <source.encoding>UTF-8</source.encoding>
+    <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
   </properties>
 
   <dependencies>
@@ -218,24 +218,17 @@
         <configuration>
           <source>${version.java}</source>
           <target>${version.java}</target>
-          <encoding>${source.encoding}</encoding>
         </configuration>
       </plugin>
       <plugin>
         <groupId>org.apache.maven.plugins</groupId>
         <artifactId>maven-resources-plugin</artifactId>
         <version>${version.plugin.maven-resources-plugin}</version>
-        <configuration>
-          <encoding>${source.encoding}</encoding>
-        </configuration>
       </plugin>
       <plugin>
         <groupId>org.apache.maven.plugins</groupId>
         <artifactId>maven-source-plugin</artifactId>
         <version>${version.plugin.maven-source-plugin}</version>
-        <configuration>
-          <encoding>${source.encoding}</encoding>
-        </configuration>
       </plugin>
       <plugin>
         <groupId>org.apache.maven.plugins</groupId>
