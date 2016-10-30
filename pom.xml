@@ -43,7 +43,7 @@
     <version.slf4j>1.7.7</version.slf4j>
     <version.h2>1.4.177</version.h2>
     <version.junit>4.11</version.junit>
-    <version.jetty>6.1.26</version.jetty>
+    <version.jetty>9.3.13.v20161014</version.jetty>
     <version.commons-dbcp>1.4</version.commons-dbcp>
 
     <!-- Version of maven plugins -->
@@ -179,15 +179,9 @@
       <scope>test</scope>
     </dependency>
 
-    <!-- Required for Jetty 6 deployment -->
+    <!-- Required for Jetty deployment -->
     <dependency>
-      <groupId>org.mortbay.jetty</groupId>
-      <artifactId>jetty-naming</artifactId>
-      <version>${version.jetty}</version>
-      <scope>runtime</scope>
-    </dependency>
-    <dependency>
-      <groupId>org.mortbay.jetty</groupId>
+      <groupId>org.eclipse.jetty</groupId>
       <artifactId>jetty-plus</artifactId>
       <version>${version.jetty}</version>
       <scope>runtime</scope>
@@ -247,8 +241,8 @@
       </plugin>
       
       <plugin>
-        <groupId>org.mortbay.jetty</groupId>
-        <artifactId>maven-jetty-plugin</artifactId>
+        <groupId>org.eclipse.jetty</groupId>
+        <artifactId>jetty-maven-plugin</artifactId>
         <version>${version.jetty}</version>
         <configuration>
           <scanIntervalSeconds>10</scanIntervalSeconds>
@@ -260,7 +254,7 @@
             <id>start-jetty</id>
             <phase>pre-integration-test</phase>
             <goals>
-              <goal>run</goal>
+              <goal>deploy-war</goal>
             </goals>
             <configuration>
               <scanIntervalSeconds>0</scanIntervalSeconds>

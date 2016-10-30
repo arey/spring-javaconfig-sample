@@ -1,8 +1,8 @@
-<?xml version="1.0"?>
-<!DOCTYPE Configure PUBLIC "-//Mort Bay Consulting//DTD Configure//EN" "http://jetty.mortbay.org/configure.dtd">
-<Configure class="org.mortbay.jetty.webapp.WebAppContext">
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE Configure PUBLIC "-//Jetty//Configure//EN" "http://www.eclipse.org/jetty/configure.dtd">
+<Configure class="org.eclipse.jetty.maven.plugin.JettyWebAppContext">
   <!-- Jetty 6 datasource syntax -->
-  <New id="companyDataSource" class="org.mortbay.jetty.plus.naming.Resource">
+  <New id="companyDataSource" class="org.eclipse.jetty.plus.jndi.Resource">
     <Arg>
     </Arg>
     <Arg>java:comp/env/jdbc/MyDatabase</Arg>
