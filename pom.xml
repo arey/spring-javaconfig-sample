@@ -31,7 +31,7 @@
     <version.java>1.6</version.java>
 
     <!-- Version of third libraries -->
-    <version.spring-framework>4.0.5.RELEASE</version.spring-framework>
+    <version.spring-framework>4.3.3.RELEASE</version.spring-framework>
     <version.spring-data-jpa>1.6.0.RELEASE</version.spring-data-jpa>
     <version.spring-security>3.2.4.RELEASE</version.spring-security>
     <version.servlet-api>3.0.1</version.servlet-api>
