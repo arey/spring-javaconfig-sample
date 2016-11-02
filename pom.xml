@@ -39,9 +39,9 @@
     <version.hibernate-javassist>3.18.1-GA</version.hibernate-javassist>
     <version.hibernate-jpa-2.1-api>1.0.0.Final</version.hibernate-jpa-2.1-api>
     <version.aspectj>1.7.4</version.aspectj>
-    <version.logback>1.1.2</version.logback>
-    <version.slf4j>1.7.7</version.slf4j>
-    <version.h2>1.4.177</version.h2>
+    <version.logback>1.1.7</version.logback>
+    <version.slf4j>1.7.21</version.slf4j>
+    <version.h2>1.4.193</version.h2>
     <version.junit>4.12</version.junit>
     <version.jetty>9.3.13.v20161014</version.jetty>
     <version.commons-dbcp>1.4</version.commons-dbcp>
