@@ -1,11 +1,11 @@
 /**
  * Copyright 2014 the original author or authors.
- * 
+ *
  * Licensed under the Apache License, Version 2.0 (the "License"); you may not use this file except
  * in compliance with the License. You may obtain a copy of the License at
- * 
+ *
  * http://www.apache.org/licenses/LICENSE-2.0
- * 
+ *
  * Unless required by applicable law or agreed to in writing, software distributed under the License
  * is distributed on an "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express
  * or implied. See the License for the specific language governing permissions and limitations under
@@ -24,15 +24,16 @@ import org.springframework.security.authentication.UsernamePasswordAuthenticatio
 import org.springframework.security.config.annotation.authentication.builders.AuthenticationManagerBuilder;
 import org.springframework.security.config.annotation.web.builders.HttpSecurity;
 import org.springframework.security.config.annotation.web.builders.WebSecurity;
+import org.springframework.security.config.annotation.web.configuration.EnableWebSecurity;
 import org.springframework.security.config.annotation.web.configuration.WebSecurityConfigurerAdapter;
 import org.springframework.security.config.annotation.web.servlet.configuration.EnableWebMvcSecurity;
 import org.springframework.security.core.Authentication;
 import org.springframework.security.core.context.SecurityContextHolder;
 import org.springframework.security.core.userdetails.UserDetails;
- 
+
 
 @Configuration
-@EnableWebMvcSecurity
+@EnableWebSecurity
 public class SecurityConfig extends WebSecurityConfigurerAdapter {
 
 
@@ -60,15 +61,15 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter {
             .anyRequest().authenticated() // 7
             .and()
           .formLogin()
-             .loginPage("/login") 
+             .loginPage("/login")
              .permitAll();
     }
-    
+
 
     /**
      * Authenticated user information available as a proxified Spring bean.
-     * 
-     * <p>Could be inject into beans of scope singleton (ie. @Service or @Controler)      
+     *
+     * <p>Could be inject into beans of scope singleton (ie. @Service or @Controler)
      */
     @Bean
     @Scope(value = "session", proxyMode = ScopedProxyMode.TARGET_CLASS)
@@ -77,10 +78,10 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter {
         Authentication authentication = SecurityContextHolder.getContext().getAuthentication();
         if (authentication != null) {
             if (authentication instanceof UsernamePasswordAuthenticationToken) {
-                return (UserDetails) ((UsernamePasswordAuthenticationToken) authentication).getPrincipal();
+                return (UserDetails) authentication.getPrincipal();
             }
             if (authentication instanceof RememberMeAuthenticationToken) {
-                return (UserDetails) ((RememberMeAuthenticationToken) authentication).getPrincipal();
+                return (UserDetails) authentication.getPrincipal();
             }
         }
        return null;
