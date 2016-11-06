@@ -38,7 +38,7 @@
     <version.hibernate>5.2.4.Final</version.hibernate>
     <version.hibernate-javassist>3.22.0-CR1</version.hibernate-javassist>
     <version.hibernate-jpa-2.1-api>1.0.0.Final</version.hibernate-jpa-2.1-api>
-    <version.aspectj>1.7.4</version.aspectj>
+    <version.aspectj>1.8.9</version.aspectj>
     <version.logback>1.1.7</version.logback>
     <version.slf4j>1.7.21</version.slf4j>
     <version.h2>1.4.193</version.h2>
