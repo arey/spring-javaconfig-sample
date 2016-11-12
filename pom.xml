@@ -28,7 +28,7 @@
   </licenses>
 
   <properties>
-    <version.java>1.6</version.java>
+    <version.java>1.8</version.java>
 
     <!-- Version of third libraries -->
     <version.spring-framework>4.3.3.RELEASE</version.spring-framework>
