@@ -31,19 +31,19 @@
     <version.java>1.8</version.java>
 
     <!-- Version of third libraries -->
-    <version.spring-framework>4.3.9.RELEASE</version.spring-framework>
-    <version.spring-data-jpa>1.11.4.RELEASE</version.spring-data-jpa>
+    <version.spring-framework>5.0.0.RELEASE</version.spring-framework>
+    <version.spring-data-jpa>2.0.0.RELEASE</version.spring-data-jpa>
     <version.spring-security>4.2.3.RELEASE</version.spring-security>
-    <version.servlet-api>3.0.1</version.servlet-api>
-    <version.hibernate>5.2.10.Final</version.hibernate>
+    <version.servlet-api>4.0.0</version.servlet-api>
+    <version.hibernate>5.2.11.Final</version.hibernate>
     <version.hibernate-javassist>3.22.0-CR2</version.hibernate-javassist>
     <version.hibernate-jpa-2.1-api>1.0.0.Final</version.hibernate-jpa-2.1-api>
-    <version.aspectj>1.8.10</version.aspectj>
+    <version.aspectj>1.8.11</version.aspectj>
     <version.logback>1.2.3</version.logback>
     <version.slf4j>1.7.21</version.slf4j>
     <version.h2>1.4.196</version.h2>
     <version.junit>4.12</version.junit>
-    <version.jetty>9.4.6.v20170531</version.jetty>
+    <version.jetty>9.4.7.v20170914</version.jetty>
     <version.commons-dbcp>1.4</version.commons-dbcp>
 
     <!-- Version of maven plugins -->
