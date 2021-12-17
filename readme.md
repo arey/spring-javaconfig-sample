@@ -1,5 +1,5 @@
 # Spring Java Config Sample #
-[![Build Status](https://github.com/arey/spring-javaconfig-sample/actions/workflows/maven-build.yml/badge.svg)](https://github.com/sarey/spring-javaconfig-sample/actions/workflows/maven-build.yml)
+[![Build Status](https://github.com/arey/spring-javaconfig-sample/actions/workflows/maven-build.yml/badge.svg)](https://github.com/arey/spring-javaconfig-sample/actions/workflows/maven-build.yml)
 
 Since Spring 3.0, the JavaConfig features are included in the Core Spring module. Thus Java Developer could move Spring beans definition from configuration XML files to Java classes.
 
