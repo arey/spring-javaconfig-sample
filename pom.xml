@@ -33,7 +33,7 @@
     <!-- Version of third libraries -->
     <version.spring-framework>5.3.14</version.spring-framework>
     <version.spring-data-jpa>2.6.0</version.spring-data-jpa>
-    <version.spring-security>5.6.0</version.spring-security>
+    <version.spring-security>5.6.12</version.spring-security>
     <version.servlet-api>4.0.1</version.servlet-api>
     <version.hibernate>5.6.1.Final</version.hibernate>
     <version.hibernate-javassist>3.22.0-CR2</version.hibernate-javassist> <!-- check -->
