@@ -3,7 +3,7 @@
 
 Since Spring Framework 3.0, the JavaConfig features are included in the Core Spring module. Thus Java Developer could move Spring beans definition from configuration XML files to Java classes.
 
-Based on Spring Framework 5.3, Spring Data JPA 2.6, Spring Security 5.6 and Hibernate 5.6, this sample show how to use the Spring's new Java-configuration support and its @Configuration-annotated class.
+Based on Spring Framework 6.2, Spring Data JPA 3.4, Spring Security 6.4 and Hibernate ORM 6.6, this sample show how to use the Spring's new Java-configuration support and its @Configuration-annotated class.
 
 The following classes, interfaces and annotations are used in the sample:
 * JavaConfig main classes and annotations: `@Configuration`, `@Bean`, `@ComponentScan`, `@Import`, `@ImportResource`, `@Profile`, `Environment`, `JndiObjectFactoryBean`, `@Scope` 

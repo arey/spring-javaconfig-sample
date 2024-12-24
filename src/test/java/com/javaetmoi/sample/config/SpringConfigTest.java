@@ -13,30 +13,31 @@
  */
 package com.javaetmoi.sample.config;
 
-import static org.junit.Assert.assertNotNull;
-import org.junit.Test;
-import org.junit.runner.RunWith;
+import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.test.context.ActiveProfiles;
 import org.springframework.test.context.ContextConfiguration;
 import org.springframework.test.context.ContextHierarchy;
-import org.springframework.test.context.junit4.SpringJUnit4ClassRunner;
+import org.springframework.test.context.junit.jupiter.SpringJUnitConfig;
 import org.springframework.test.context.web.WebAppConfiguration;
 import org.springframework.web.context.WebApplicationContext;
 
-@RunWith(SpringJUnit4ClassRunner.class)
+import static org.junit.jupiter.api.Assertions.assertNotNull;
+
+
+@SpringJUnitConfig
 @WebAppConfiguration
 @ContextHierarchy({ 
         @ContextConfiguration(classes = MainConfig.class),
         @ContextConfiguration(classes = WebMvcConfig.class) })
 @ActiveProfiles("test")
-public class SpringConfigTest {
+class SpringConfigTest {
 
     @Autowired
     private WebApplicationContext wac;
 
     @Test
-    public void springConfiguration() {
+    void springConfiguration() {
         assertNotNull(wac);
     }
 }

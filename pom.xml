@@ -28,32 +28,32 @@
   </licenses>
 
   <properties>
-    <version.java>1.8</version.java>
+    <version.java>17</version.java>
 
     <!-- Version of third libraries -->
-    <version.spring-framework>5.3.14</version.spring-framework>
-    <version.spring-data-jpa>2.6.0</version.spring-data-jpa>
-    <version.spring-security>5.6.12</version.spring-security>
-    <version.servlet-api>4.0.1</version.servlet-api>
-    <version.hibernate>5.6.1.Final</version.hibernate>
-    <version.hibernate-javassist>3.22.0-CR2</version.hibernate-javassist> <!-- check -->
-    <version.hibernate-jpa-2.1-api>1.0.2.Final</version.hibernate-jpa-2.1-api>
-    <version.aspectj>1.8.11</version.aspectj>
-    <version.logback>1.2.13</version.logback>
-    <version.slf4j>1.7.21</version.slf4j>
-    <version.h2>2.0.202</version.h2>
-    <version.junit>4.13.2</version.junit>
-    <version.jetty>9.4.7.v20170914</version.jetty>
+    <version.spring-framework>6.2.1</version.spring-framework>
+    <version.spring-data-jpa>3.4.1</version.spring-data-jpa>
+    <version.spring-security>6.4.2</version.spring-security>
+    <version.servlet-api>6.1.0</version.servlet-api>
+    <version.hibernate>6.6.4.Final</version.hibernate>
+    <version.hibernate-javassist>3.30.2-GA</version.hibernate-javassist> <!-- check -->
+    <jakarta.persistence-api.version>3.1.0</jakarta.persistence-api.version>
+    <version.aspectj>1.9.22.1</version.aspectj>
+    <version.logback>1.5.15</version.logback>
+    <version.slf4j>2.0.16</version.slf4j>
+    <version.h2>2.3.232</version.h2>
+    <version.junit>5.11.4</version.junit>
+    <version.jetty>12.0.15</version.jetty>
     <version.commons-dbcp>1.4</version.commons-dbcp>
 
     <!-- Version of maven plugins -->
     <version.plugin.maven-eclipse-plugin>2.9</version.plugin.maven-eclipse-plugin>
-    <version.plugin.maven-compiler-plugin>2.3</version.plugin.maven-compiler-plugin>
-    <version.plugin.maven-resources-plugin>2.4.3</version.plugin.maven-resources-plugin>
-    <version.plugin.maven-source-plugin>2.1.2</version.plugin.maven-source-plugin>
-    <version.plugin.maven-javadoc-plugin>2.7</version.plugin.maven-javadoc-plugin>
+    <version.plugin.maven-compiler-plugin>3.13.0</version.plugin.maven-compiler-plugin>
+    <version.plugin.maven-resources-plugin>3.1.0</version.plugin.maven-resources-plugin>
+    <version.plugin.maven-source-plugin>3.2.1</version.plugin.maven-source-plugin>
+    <version.plugin.maven-javadoc-plugin>3.11.2</version.plugin.maven-javadoc-plugin>
     <version.plugin.maven-release-plugin>2.2.2</version.plugin.maven-release-plugin>
-    <version.plugin.maven-deploy-plugin>2.8.1</version.plugin.maven-deploy-plugin>
+    <version.plugin.maven-deploy-plugin>3.1.3</version.plugin.maven-deploy-plugin>
 
     <!-- Version of maven extensions -->
     <version.extension.wagon-webdav>1.0-beta-2</version.extension.wagon-webdav>
@@ -95,28 +95,23 @@
 
     <!-- Servlet API -->
     <dependency>
-      <groupId>javax.servlet</groupId>
-      <artifactId>javax.servlet-api</artifactId>
+      <groupId>jakarta.servlet</groupId>
+      <artifactId>jakarta.servlet-api</artifactId>
       <version>${version.servlet-api}</version>
-      <scope>provided</scope>
+      <!--scope>provided</scope-->
     </dependency>
 
     <!-- JPA -->
     <dependency>
-      <groupId>org.hibernate.javax.persistence</groupId>
-      <artifactId>hibernate-jpa-2.1-api</artifactId>
-      <version>${version.hibernate-jpa-2.1-api}</version>
+      <groupId>jakarta.persistence</groupId>
+      <artifactId>jakarta.persistence-api</artifactId>
+      <version>${jakarta.persistence-api.version}</version>
     </dependency>
 
     <!-- Hibernate -->
     <dependency>
       <groupId>org.hibernate</groupId>
       <artifactId>hibernate-core</artifactId>
-      <version>${version.hibernate}</version>
-    </dependency>
-    <dependency>
-      <groupId>org.hibernate</groupId>
-      <artifactId>hibernate-entitymanager</artifactId>
       <version>${version.hibernate}</version>
     </dependency>
     <!-- Javassist -->
@@ -173,8 +168,8 @@
 
     <!-- JUnit -->
     <dependency>
-      <groupId>junit</groupId>
-      <artifactId>junit</artifactId>
+      <groupId>org.junit.jupiter</groupId>
+      <artifactId>junit-jupiter-engine</artifactId>
       <version>${version.junit}</version>
       <scope>test</scope>
     </dependency>
@@ -241,11 +236,11 @@
       </plugin>
       
       <plugin>
-        <groupId>org.eclipse.jetty</groupId>
-        <artifactId>jetty-maven-plugin</artifactId>
+        <groupId>org.eclipse.jetty.ee10</groupId>
+        <artifactId>jetty-ee10-maven-plugin</artifactId>
         <version>${version.jetty}</version>
         <configuration>
-          <scanIntervalSeconds>10</scanIntervalSeconds>
+          <scan>10</scan>
           <stopKey>foo</stopKey>
           <stopPort>9999</stopPort>
         </configuration>
@@ -254,10 +249,10 @@
             <id>start-jetty</id>
             <phase>pre-integration-test</phase>
             <goals>
-              <goal>deploy-war</goal>
+              <goal>run-war</goal>
             </goals>
             <configuration>
-              <scanIntervalSeconds>0</scanIntervalSeconds>
+              <scan>0</scan>
               <daemon>true</daemon>
             </configuration>
           </execution>
