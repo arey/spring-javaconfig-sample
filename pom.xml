@@ -54,6 +54,7 @@
     <version.plugin.maven-javadoc-plugin>3.11.2</version.plugin.maven-javadoc-plugin>
     <version.plugin.maven-release-plugin>2.2.2</version.plugin.maven-release-plugin>
     <version.plugin.maven-deploy-plugin>3.1.3</version.plugin.maven-deploy-plugin>
+    <maven-war-plugin.version>3.4.0</maven-war-plugin.version>
 
     <!-- Version of maven extensions -->
     <version.extension.wagon-webdav>1.0-beta-2</version.extension.wagon-webdav>
@@ -233,6 +234,11 @@
         <groupId>org.apache.maven.plugins</groupId>
         <artifactId>maven-deploy-plugin </artifactId>
         <version>${version.plugin.maven-deploy-plugin}</version>
+      </plugin>
+      <plugin>
+        <groupId>org.apache.maven.plugins</groupId>
+        <artifactId>maven-war-plugin</artifactId>
+        <version>${maven-war-plugin.version}</version>
       </plugin>
       
       <plugin>
